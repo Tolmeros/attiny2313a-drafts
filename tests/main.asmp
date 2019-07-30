@@ -1,0 +1,36 @@
+.include "tn2313def.inc"
+#device attiny2313a
+
+.dseg
+
+;Digit:		.byte 4
+
+
+.cseg
+;.org 0
+
+;#mainfile
+#ivect RESET init
+;#ivect RESET init
+
+
+
+init:				
+	cli
+
+	ldi R16, RamEnd
+	out SPL, R16
+
+	
+	
+	sei
+
+
+loop:
+
+rjmp loop
+
+
+
+
+
